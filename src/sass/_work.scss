@@ -1,0 +1,105 @@
+.gallery {
+  width: 100%;
+  position: relative;
+
+  &__big {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media("<tablet") {
+      background-position: top right;
+    }
+
+    .name {
+      width: 100%;
+      justify-content: flex-end;
+      align-items: flex-start;
+
+      h4 {
+        background-color: $filter;
+        margin-top: $mt-l;
+        padding: $frame-padding;
+        border-left: 4px solid $green;
+        border-right: 4px solid $green;
+
+        @include media("<tablet") {
+          font-size: 1.5rem;
+          padding: 0.4rem 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__small {
+    width: 100%;
+    padding: $section;
+    @include flex();
+
+    @include media("<tablet") {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .artwork {
+      width: 50%;
+      height: 100%;
+      justify-content: flex-start;
+
+      @include media("<tablet") {
+        width: 80%;
+        justify-content: center;
+      }
+
+      @include media("<600px") {
+        width: 100%;
+      }
+
+      img {
+        width: 80%;
+        box-shadow: $box-shadow;
+
+        @include media("<tablet") {
+          width: 100%;
+        }
+      }
+    }
+
+    .text {
+      width: 50%;
+      height: 100%;
+      justify-content: flex-end;
+
+      @include media("<tablet") {
+        width: 80%;
+      }
+
+      @include media("<600px") {
+        width: 100%;
+      }
+
+      p {
+        font-family: $cat;
+        font-size: $h2;
+        line-height: 5.6rem;
+        font-weight: 600;
+        color: $white;
+
+        @include media("<tablet") {
+          font-size: 2.8rem;
+        }
+
+        @include media("<800px") {
+          font-size: 2rem;
+          line-height: 3.4rem;
+        }
+
+        span {
+          color: $green;
+        }
+      }
+    }
+  }
+}

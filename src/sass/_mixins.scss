@@ -1,0 +1,54 @@
+// ---- BUTTON STYLING ----
+@mixin cta() {
+    a {
+        font-family: $cat;
+        font-size: $cta-size;
+        font-weight: 500;
+        letter-spacing: $ls;
+        text-transform: uppercase;
+        color: $white;
+        border-bottom: 2px solid $green;
+
+        &:hover {
+            color: $light-paragraph;
+        }
+    }
+
+    i {
+        font-size: 1.2rem;
+        color: $green;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -30px;
+        opacity: 0;
+    }
+
+    a:hover + i {
+        opacity: 1;
+        right: -40px;
+        transition: 200ms all ease-in-out;
+    }
+}
+
+// ---- BACKGROUND STYLING ----
+@mixin bg($url, $size: cover, $position: center center) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: no-repeat;
+}
+
+@mixin bg_settings($size: cover, $position: center center) {
+    background-size: $size;
+    background-position: $position;
+    background-repeat: no-repeat;
+}
+
+// ---- POSITIONING ----
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

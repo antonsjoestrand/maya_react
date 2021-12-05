@@ -1,0 +1,209 @@
+.inquires,
+.contact {
+  position: relative;
+  border-right: 4px solid $green;
+
+  @include media("<desktop") {
+    border: none;
+  }
+}
+
+.inquires {
+  width: 100%;
+  margin-bottom: $mb-xl;
+
+  form {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .form-group {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+
+      @include media("<640px") {
+        flex-direction: column;
+      }
+
+      button {
+        font-family: $cat;
+        font-size: $cta-size;
+        font-weight: 500;
+        letter-spacing: $ls;
+        text-transform: uppercase;
+        color: $white;
+        padding-bottom: 5px;
+        border: none;
+        border-bottom: 2px solid $green;
+        background: none;
+        cursor: pointer;
+
+        &:hover {
+          color: $light-paragraph;
+        }
+      }
+
+      i {
+        font-size: 1.2rem;
+        color: $green;
+        position: absolute;
+        top: 37%;
+        transform: translateY(-50%);
+        right: -30px;
+        opacity: 0;
+      }
+
+      button:hover + i {
+        opacity: 1;
+        right: -40px;
+        transition: 200ms all ease-in-out;
+      }
+    }
+
+    .form-group,
+    .form-group-message {
+      label {
+        font-family: $roboto;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        width: 102px;
+        height: 48px;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+        color: $white;
+        @include flex($justify: flex-start);
+        padding-left: 20px;
+        transition: all 100ms ease-in-out;
+        order: -1;
+      }
+
+      input {
+        width: 400px;
+        height: 48px;
+        background-color: $black-alt;
+        border: none;
+        border-radius: 0;
+        color: $white;
+        padding: 0 20px;
+        position: relative;
+        box-shadow: $box-shadow;
+        transition: all 200ms ease-in-out;
+
+        @include media("<500px") {
+          width: 300px;
+        }
+
+        &:focus {
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
+
+        &:focus ~ label {
+          background-color: $green;
+        }
+      }
+    }
+
+    .form-group-message {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      textarea {
+        width: 502px;
+        line-height: 1.4rem;
+        border-radius: 0;
+        border: none;
+        resize: none;
+        color: $white;
+        background-color: $black-alt;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        transition: all 200ms ease-in-out;
+
+        @include media("<640px") {
+          width: 400px;
+        }
+
+        @include media("<500px") {
+          width: 300px;
+        }
+
+        &:focus {
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
+
+        &:focus ~ label {
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  width: 100%;
+
+  .information {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .info {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+
+      .icon {
+        width: 72px;
+        height: 72px;
+        background-color: $black-alt;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          width: 46%;
+        }
+
+        .location {
+          width: 36%;
+        }
+      }
+
+      p {
+        font-family: $cat;
+        font-size: $cta-size;
+        font-weight: 500;
+        color: $white;
+      }
+
+      span.edit-icon {
+        font-size: 1.2rem;
+        outline: none;
+        background-color: none;
+        border: none;
+        color: #e0e1e2;
+        cursor: pointer;
+        padding-bottom: 10px;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}

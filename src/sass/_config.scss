@@ -1,0 +1,52 @@
+// ---- COLOR VARIABLES ----
+$black: #1c1c1c;
+$black-alt: #242424;
+$black-alt2: #1F1F1F;
+$white: #ffffff;
+$green: #00a9b1;
+
+$filter: rgba(28, 28, 28, 0.97);
+$filter-dark: rgba(28, 28, 28, 0.99);
+$light-paragraph: rgba(255, 255, 255, 0.8);
+$footer-text: rgba(255, 255, 255, 0.4);
+$box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+
+// ---- FONT VARIABLES ----
+$cat: "Catamaran", sans-serif;
+$roboto: "Roboto", sans-serif;
+$light-font: 400;
+$regular-font: 500;
+$bold-font: 700;
+$h1: 4.5rem;
+$h2: 3.8rem;
+$h3: 2.4rem;
+$h4: 2rem;
+$text-size: 1.2rem;
+$cta-size: 1.4rem;
+$ls: 0.5px;
+$lh: 2.2rem;
+
+// ---- MARGIN & PADDING VARIABLES ----
+$header: 8rem 0 10rem 0;
+$section: 8rem 0;
+$section-bottom: 5rem;
+$mb-xl: 8rem;
+$card: 4rem;
+$mt-l: 4rem;
+$pb-l: 4rem;
+$mb-m: 2.5rem;
+$pb-m: 2.5rem;
+$mt-s: 2rem;
+$pt-s: 2rem;
+$pb-s: 2rem;
+$mb-xs: 1rem;
+$pb-xs: 1rem;
+$button-padding: 0.5rem 1rem;
+$frame-padding: 1rem 2rem;
+
+// ---- TRANSITION VARIABLES ----
+$tr100: 100ms ease-in;
+$tr200: 200ms ease-in;
+
+// ---- MIN COLUMN SIZE ----
+$col: 346px;

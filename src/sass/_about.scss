@@ -1,0 +1,144 @@
+.main-secondary {
+  background-color: transparent;
+  padding-bottom: $mb-xl;
+}
+
+.about {
+  position: relative;
+  padding-bottom: 8px;
+  border-right: 4px solid $green;
+
+  @include media("<desktop") {
+    border: none;
+  }
+
+  &__content {
+    width: 100%;
+
+    .story {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+
+      .title {
+        width: 70%;
+
+        @include media("<800px") {
+          width: 100%;
+        }
+
+        p {
+          padding-top: 1rem;
+        }
+      }
+
+      .profile {
+        width: 24%;
+
+        @include media("<800px") {
+          display: none;
+        }
+
+        img {
+          width: 100%;
+          box-shadow: $box-shadow;
+        }
+      }
+    }
+
+    .career {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+
+      @include media("<800px") {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .title {
+        width: 70%;
+
+        @include media("<800px") {
+          width: 100%;
+        }
+
+        p {
+          padding-top: 1rem;
+        }
+      }
+
+      .skills {
+        width: 30%;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.6rem;
+
+        @include media("<800px") {
+          width: 50%;
+          justify-content: flex-start;
+        }
+
+        @include media("<phone") {
+          width: 100%;
+        }
+
+        button {
+          font-family: $roboto;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          color: $footer-text;
+          border: 1px solid $footer-text;
+          padding: 0.4rem 0.6rem;
+          background: none;
+
+          &:hover {
+            color: $green;
+            border: 1px solid $green;
+          }
+        }
+
+        button.delete-icon {
+          color: #9b4141;
+          cursor: pointer;
+
+          &:hover {
+            color: $green;
+          }
+        }
+
+        button.edit-icon {
+          color: #e0e1e2;
+          cursor: pointer;
+
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+
+    .social {
+      justify-content: flex-start;
+      gap: 2rem;
+
+      a {
+        font-size: $h4;
+        color: $green;
+
+        &:hover {
+          color: $light-paragraph;
+        }
+      }
+    }
+
+    .cta {
+      position: relative;
+      display: inline-block;
+
+      @include cta();
+    }
+  }
+}

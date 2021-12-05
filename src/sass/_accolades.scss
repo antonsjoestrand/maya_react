@@ -1,0 +1,122 @@
+.awards,
+.articles,
+.testimonials {
+  position: relative;
+  border-right: 4px solid $green;
+
+  @include media("<desktop") {
+    border: none;
+  }
+}
+
+.awards,
+.articles {
+  margin-bottom: $mb-xl;
+}
+
+.accolade-cards {
+  @include flex($justify: flex-start);
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  .accolade {
+    max-width: 48%;
+
+    @include media("<500px") {
+      min-width: 100%;
+    }
+  }
+
+  .card {
+    background-color: $black-alt;
+    padding: $card;
+    box-shadow: $box-shadow;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    flex: 0 auto;
+    min-width: 360px;
+
+    @include media("<500px") {
+      padding: 3rem;
+      min-width: 100%;
+    }
+
+    &:hover {
+      outline: 1px solid $green;
+
+      h4 {
+        color: $green;
+      }
+
+      p {
+        color: $green;
+      }
+    }
+
+    .type {
+      font-family: $cat;
+      font-size: $cta-size;
+      font-weight: 500;
+      color: $green;
+      margin: 0;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.testimonial-cards {
+  @include flex();
+  gap: 4rem;
+  flex-direction: column;
+
+  .card {
+    background-color: $black-alt;
+    padding: $card;
+    box-shadow: $box-shadow;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 100%;
+
+    @include media("<phone") {
+      padding: 3rem;
+    }
+
+    h4 {
+      font-family: $cat;
+      font-weight: 500;
+      color: $green;
+      padding-bottom: 0.2rem;
+
+      i {
+        margin-right: 15px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+}
+
+.testimonials {
+  padding-bottom: 8px;
+
+  .testimonial-cards {
+    .title-h4 {
+      margin-bottom: 5px;
+    }
+  }
+
+  .cta {
+    display: inline-block;
+    position: relative;
+
+    @include cta();
+    margin-top: $mt-l;
+  }
+}
