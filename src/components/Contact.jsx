@@ -32,6 +32,7 @@ export default function Contact() {
       )
       .then(
         function () {
+          window.scrollTo(0, 0);
           navigate("/success");
         },
         function (error) {
